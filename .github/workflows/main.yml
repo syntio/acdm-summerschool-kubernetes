@@ -6,7 +6,7 @@ env:
   CLUSTER_NAME: summerschoolcluster
   CLUSTER_RESOURCE_GROUP: summerschool
   NAMESPACE: nginx
-  SECRET: SummerSchool
+  SECRET: summerschool
   APP_NAME: summerschool
   
 jobs:
