@@ -3,10 +3,10 @@ on: [push]
 # Environment variables available to all jobs and steps in this workflow
 env:
   REGISTRY_NAME: summerschool
-  CLUSTER_NAME: SummerSchoolCluster
-  CLUSTER_RESOURCE_GROUP: SummerSchool
+  CLUSTER_NAME: summerschoolcluster
+  CLUSTER_RESOURCE_GROUP: summerschool
   NAMESPACE: nginx
-  APP_NAME: SummerSchool
+  APP_NAME: summerschool
   
 jobs:
   build:
