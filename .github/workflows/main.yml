@@ -2,12 +2,11 @@ on: [push]
 
 # Environment variables available to all jobs and steps in this workflow
 env:
-  REGISTRY_NAME: {registry-name}
-  CLUSTER_NAME: {cluster-name}
-  CLUSTER_RESOURCE_GROUP: {resource-group-name}
-  NAMESPACE: {namespace-name}
-  SECRET: {secret-name}
-  APP_NAME: {app-name}
+  REGISTRY_NAME: SummerSchool
+  CLUSTER_NAME: SummerSchoolCluster
+  CLUSTER_RESOURCE_GROUP: SummerSchool
+  NAMESPACE: nginx
+  APP_NAME: SummerSchool
   
 jobs:
   build:
@@ -44,7 +43,6 @@ jobs:
         container-registry-url: ${{ env.REGISTRY_NAME }}.azurecr.io
         container-registry-username: ${{ secrets.REGISTRY_USERNAME }}
         container-registry-password: ${{ secrets.REGISTRY_PASSWORD }}
-        secret-name: ${{ env.SECRET }}
         namespace: ${{ env.NAMESPACE }}
         force: true
     
@@ -56,6 +54,4 @@ jobs:
           manifests/service.yml
         images: |
           ${{ env.REGISTRY_NAME }}.azurecr.io/${{ env.APP_NAME }}:${{ github.sha }}
-        imagepullsecrets: |
-          ${{ env.SECRET }}
         namespace: ${{ env.NAMESPACE }}
