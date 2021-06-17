@@ -6,6 +6,7 @@ env:
   CLUSTER_NAME: summerschoolcluster
   CLUSTER_RESOURCE_GROUP: summerschool
   NAMESPACE: nginx
+  SECRET: SummerSchool
   APP_NAME: summerschool
   
 jobs:
@@ -43,6 +44,7 @@ jobs:
         container-registry-url: ${{ env.REGISTRY_NAME }}.azurecr.io
         container-registry-username: ${{ secrets.REGISTRY_USERNAME }}
         container-registry-password: ${{ secrets.REGISTRY_PASSWORD }}
+        secret-name: ${{ env.SECRET }}
         namespace: ${{ env.NAMESPACE }}
         force: true
     
@@ -54,5 +56,7 @@ jobs:
           manifests/service.yml
         images: |
           ${{ env.REGISTRY_NAME }}.azurecr.io/${{ env.APP_NAME }}:${{ github.sha }}
+        imagepullsecrets: |
+          ${{ env.SECRET }}
         namespace: ${{ env.NAMESPACE }}
 
