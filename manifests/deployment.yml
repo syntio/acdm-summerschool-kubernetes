@@ -5,6 +5,6 @@ metadata:
 spec:
   containers:
   - name: nginx
-    image: summerschool.azurecr.io/summerschool.azurecr.io/summerschool:latest
+    image: summerschool.azurecr.io/summerschool:latest
     ports:
     - containerPort: 80    
