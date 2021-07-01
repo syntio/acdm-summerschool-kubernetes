@@ -2,7 +2,7 @@ on: [push]
 
 # Environment variables available to all jobs and steps in this workflow
 env:
-  REGISTRY_NAME: SummerSchool
+  REGISTRY_NAME: summerschool
   CLUSTER_NAME: SummerSchoolCluster
   CLUSTER_RESOURCE_GROUP: SummerSchool
   NAMESPACE: nginx
