@@ -18,8 +18,8 @@ metadata:
   labels:
     run: nginx
 spec:
+type: LoadBalancer
   ports:
   - port: 80
-    protocol: TCP
   selector:
     run: nginx
