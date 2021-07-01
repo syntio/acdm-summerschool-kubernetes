@@ -4,13 +4,6 @@ metadata:
   name: nginx
   namespace: nginx
 spec:
-  selector:
-    matchLabels:
-      app: nginx
-  template:
-    metadata:
-      labels:
-        app: nginx
   containers:
     - name: nginx
       image: summerschool.azurecr.io/summerschool
