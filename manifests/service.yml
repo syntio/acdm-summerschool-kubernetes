@@ -8,6 +8,6 @@ spec:
   selector:
     bb: web
   ports:
-  - port: 8000
+  - port: 80
     targetPort: 80
     nodePort: 30001
