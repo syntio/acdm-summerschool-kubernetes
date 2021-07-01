@@ -9,5 +9,5 @@ spec:
     bb: web
   ports:
   - port: 80
-    targetPort: 80
+    targetPort: 8000
     nodePort: 30001
