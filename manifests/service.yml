@@ -4,7 +4,10 @@ metadata:
   name: nginx-entrypoint
   namespace: nginx
 spec:
+  selector:
+    name: nginx
   type: LoadBalancer
   ports:
-  - port: 80
-  targetPort: 80
+  - protocol: TCP
+    port: 80
+    targetPort: 9376
