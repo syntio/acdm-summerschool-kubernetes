@@ -5,7 +5,7 @@ metadata:
   namespace: nginx
 spec:
   selector:
-    name: nginx
+    app: nginx
   type: LoadBalancer
   ports:
   - protocol: TCP
