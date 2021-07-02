@@ -1,12 +1,7 @@
-# SummerScoolK8s
-Repo made for Syntio summer school. It contains simple nginx hello world web app with a dockerfile.
+# SummerSchoolK8s
+Repo made for Syntio summer school. It contains simple nginx hello world web app with a dockerfile, kubernetes deployments and github action workflow.
+Workflow is set to on push, which means you can do some simple change, push it and you will see this code in action.
 
-Docker needs to be installed on host machine to use this repo.
-
-### Tutorial:
-1. Clone the repo
-2. Build the image (cd into repo and run `docker build . -t nginx)
-3. Run the image (docker run -p 8000:80 -t nginx)
-4. Connect to server (type in browser localhost:8000)
+The push triggers a workflow that builds a docker image and pushes it to an azure container registry. Then, nside of a kubernetes cluster on azure kuberentes service yaml files are applied and the web app is deployed and can be connected to through browser with ip and port.    
 
 Congratulations!
