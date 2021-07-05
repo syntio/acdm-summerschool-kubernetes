@@ -17,3 +17,8 @@ spec:
         image: summerschool.azurecr.io/summerschool
         ports:
         - containerPort: 80
+        resources:
+          limits:
+            cpu: 200m
+          requests:
+            cpu: 100m
