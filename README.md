@@ -5,3 +5,6 @@ Workflow is set to on push, which means you can do some simple change, push it a
 The push triggers a workflow that builds a docker image and pushes it to an azure container registry. Then, nside of a kubernetes cluster on azure kuberentes service yaml files are applied and the web app is deployed and can be connected to through browser with ip and port.    
 
 Congratulations!
+
+# References
+https://docs.microsoft.com/en-us/azure/aks/kubernetes-action
